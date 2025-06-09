@@ -7,12 +7,10 @@ class ModelBuku extends CI_Model {
     //manajemen buku
     public function getBuku() {
         return $this->db->get('buku');
-    
     }
     
     public function bukuWhere($where) {
-        return $this->db->get_where('buku', $where)
-
+        return $this->db->get_where('buku', $where);
     }
 
     public function simpanBuku($data = null) {
@@ -23,7 +21,7 @@ class ModelBuku extends CI_Model {
         $this->db->update('buku', $data, $where);
     }
     public function hapusBuku($where = null) {
-        $this->is->db->delete('buku', $where);
+        $this->this->db->delete('buku', $where);
     }
 
     public function total($field, $where) {
@@ -34,5 +32,3 @@ class ModelBuku extends CI_Model {
     $this->db->from('buku');
     return $this->db->get()->row($field);
 }
-
-//manajemen kategori
