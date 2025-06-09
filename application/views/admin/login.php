@@ -21,8 +21,8 @@
                     <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?> 
                   </div>
                   <div class="form-group">
-                  <input type="password" class="form-control form-control-user" id="password" placeholder="password" name="password"> 
-                  <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?> 
+                    <input type="password" class="form-control form-control-user" id="password" placeholder="password" name="password"> 
+                    <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?> 
                   </div>
                   <button type="submit" class="btn-primary btn-user btn-block"> Masuk </button>
                 </form>
