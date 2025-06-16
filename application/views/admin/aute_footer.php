@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <!-- Bootstrap core JavaScript--> 
 <script src="<?= base_url('assets/'); ?>vendor/vendor/jquery/jquery.min.js"></script> 
   <script src="<?= base_url('assets/'); ?>vendor/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
