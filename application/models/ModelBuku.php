@@ -1,4 +1,5 @@
 <?php 
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class ModelBuku extends CI_Model {
@@ -56,10 +57,15 @@ class ModelBuku extends CI_Model {
 
     // Join kategori dengan buku
     public function joinKategoriBuku($where) {
-        $this->db->select('buku.id_kategori, kategori.kategori');
+        $this->db->select('buku.id_kategori, kategori.nama_kategori');
         $this->db->from('buku');
-        $this->db->join('kategori', 'kategori.id = buku.id_kategori');
+        $this->db->join('kategori', 'kategori.id_kategori= buku.id_kategori');
         $this->db->where($where);
         return $this->db->get();
+    }
+
+    public function getLimitBuku() {  
+        $this->db->limit(5);  
+        return $this->db->get('buku');  
     }
 }

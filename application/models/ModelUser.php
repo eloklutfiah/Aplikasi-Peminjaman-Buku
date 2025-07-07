@@ -26,4 +26,17 @@ class ModelUser extends CI_Model {
         $this->db->limit(10, 0); 
         return $this->db->get();  
     }  
+
+    public function joinKategoriBuku($where) { 
+        $this->db->from('buku');  
+        $this->db->join('kategori','kategori.id_kategori = buku.id_kategori');  
+        $this->db->where($where);  
+        return $this->db->get();  
+    }
+
+    public function getAnggota() {
+    // Asumsi role_id = 2 adalah anggota
+    return $this->db->get_where('user', ['role_id' => 2]);
+    }
+
 } 
